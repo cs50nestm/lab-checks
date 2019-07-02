@@ -9,13 +9,13 @@ def exists(self):
 
 
 @check50(exists)
-def compiles(compiles):
+def compiles():
     """syntax.c compiles."""
     check50.c.compile("syntax.c", lcs50=True)
 
 
 @check50(compiles)
-def prints_thisiscs50ap(self):
+def prints_thisiscs50ap():
     """prints "This is CS50AP!\\n" """
     expected = "[Tt]his is CS50AP!?\n"
     actual = self.spawn("./syntax").stdout()
