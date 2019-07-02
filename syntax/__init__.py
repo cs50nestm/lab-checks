@@ -18,7 +18,7 @@ def compiles():
 def prints_thisiscs50ap():
     """prints "This is CS50AP!\\n" """
     expected = "[Tt]his is CS50AP!?\n"
-    actual = self.spawn("./syntax").stdout()
+    actual = check50.run("./syntax").stdout()
     if not re.match(expected, actual):
         err = Error(Mismatch("This is CS50AP!\n", actual))
         if re.match(expected[:-1], actual):
