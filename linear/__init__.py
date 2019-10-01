@@ -12,10 +12,10 @@ def compiles():
     """linear.c compiles."""
     check50.c.compile("linear.c", lcs50=True)
 
-@check50.check(compiles)
-def finds_28():
-    """finds 28"""
-    check50.run("./linear").stdin("28").stdout("Found your number! Bingo!\n").exit(0)
+# @check50.check(compiles)
+# def finds_28():
+#     """finds 28"""
+#     check50.run("./linear").stdin("28").stdout("Found your number! Bingo!\n").exit(0)
         
 @check50.check(compiles)
 def finds_64():
