@@ -17,11 +17,11 @@ def compiles():
 
 @check50.check(compiles)
 def finds_28():
-    """prints "This is CS50AP!\\n" """
-    expected = "[Tt]his is CS50AP!?\n"
-    actual = check50.run("./syntax").stdout()
+    """finds 28" """
+    expected = "Found your number! Bingo!\n"
+    actual = check50.run("./linear").stdout()
     if not re.match(expected, actual):
-        err = Error(Mismatch("This is CS50AP!\n", actual))
+        err = Error(Mismatch("Found your number! Bingo!\n", actual))
         if re.match(expected[:-1], actual):
             err.helpers = "Did you forget a newline (\"\\n\") at the end of your printf string?"
         raise err
