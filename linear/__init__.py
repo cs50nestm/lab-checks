@@ -15,7 +15,7 @@ def compiles():
 @check50.check(compiles)
 def finds_28():
     """finds 28"""
-    expected = "Found your number! Bingo!\n"
+    expected = "Found your number! Bingo!\\n"
     actual = check50.run("./linear").stdout()
     if not re.match(expected, actual):
         err = Error(Mismatch("Found your number! Bingo!\n", actual))
