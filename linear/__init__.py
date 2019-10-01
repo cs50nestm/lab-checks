@@ -6,7 +6,7 @@ def exists():
     """linear.c exists."""
     check50.exists("linear.c")
 
-@check50.check(exists)
+@check50.check()
 def compiles():
     """linear.c compiles."""
     check50.c.compile("linear.c", lcs50=True)
