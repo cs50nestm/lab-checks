@@ -20,19 +20,19 @@ def finds_18():
 @check50.check(compiles)
 def finds_2():
     """finds 2"""
-    check50.run("./linear").stdin("2").stdout("Found\n").exit(0)
+    check50.run("./binary").stdin("2").stdout("Found\n").exit(0)
         
 @check50.check(compiles)
 def finds_20():
     """finds 20"""
-    check50.run("./linear").stdin("20").stdout("Found\n").exit(0)
+    check50.run("./binary").stdin("20").stdout("Found\n").exit(0)
         
 @check50.check(compiles)
 def does_not_find_9():
     """does not find 9"""
-    check50.run("./linear").stdin("9").stdout("Not found!\n").exit(0)
+    check50.run("./binary").stdin("9").stdout("Not found!\n").exit(0)
         
 @check50.check(compiles)
 def does_not_find_30():
     """does not find 30"""
-    check50.run("./linear").stdin("30").stdout("Not found!\n").exit(0)
+    check50.run("./binary").stdin("30").stdout("Not found!\n").exit(0)
