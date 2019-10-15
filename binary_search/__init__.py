@@ -4,35 +4,35 @@ import re
 
 @check50.check()
 def exists(self):
-    """linear.c exists."""
-    check50.exists("linear.c")
+    """binary.c exists."""
+    check50.exists("binary.c")
 
 @check50.check(exists)
 def compiles():
-    """linear.c compiles."""
-    check50.c.compile("linear.c", lcs50=True)
+    """binary.c compiles."""
+    check50.c.compile("binary.c", lcs50=True)
 
 @check50.check(compiles)
-def finds_28():
-    """finds 28"""
-    check50.run("./linear").stdin("28").stdout("Found your number! Bingo!\n").exit(0)
+def finds_18():
+    """finds 18"""
+    check50.run("./binary").stdin("18").stdout("Found\n").exit(0)
         
 @check50.check(compiles)
-def finds_64():
-    """finds 64"""
-    check50.run("./linear").stdin("64").stdout("Found your number! Bingo!\n").exit(0)
+def finds_2():
+    """finds 2"""
+    check50.run("./linear").stdin("2").stdout("Found\n").exit(0)
         
 @check50.check(compiles)
-def finds_7():
-    """finds 7"""
-    check50.run("./linear").stdin("7").stdout("Found your number! Bingo!\n").exit(0)
+def finds_20():
+    """finds 20"""
+    check50.run("./linear").stdin("20").stdout("Found\n").exit(0)
         
 @check50.check(compiles)
-def does_not_find_31():
-    """does not find 31"""
-    check50.run("./linear").stdin("31").stdout("Sorry better luck next time!\n").exit(0)
+def does_not_find_9():
+    """does not find 9"""
+    check50.run("./linear").stdin("9").stdout("Not found!\n").exit(0)
         
 @check50.check(compiles)
-def does_not_find_59():
-    """does not find 59"""
-    check50.run("./linear").stdin("59").stdout("Sorry better luck next time!\n").exit(0)
+def does_not_find_30():
+    """does not find 30"""
+    check50.run("./linear").stdin("30").stdout("Not found!\n").exit(0)
