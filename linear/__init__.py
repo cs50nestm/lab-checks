@@ -24,6 +24,6 @@ def finds_Malan():
         
 @check50.check(compiles)
 def does_not_finds_Tanzosh():
-    """foes_not_finds_Tanzosh"""
+    """does not finds Tanzosh"""
     check50.run("./linear").stdin("Tanzosh").stdout("Quitting\n").exit(0)
         
